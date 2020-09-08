@@ -42,9 +42,11 @@ console.log(multiply(2,2));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogYears(age) {
+    return age * 7;
+}
 
-
-
+console.log(dogYears(34));
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -64,6 +66,37 @@ console.log(multiply(2,2));
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight, age) {
+    if(age >= 1 ){                                                      // adult dogs at least 1 year
+
+        if(weight <= 5) {                                               // up to 5 lbs - 5% of their body weight
+            return .05 * weight + "lbs of dog food";
+
+        } else if (weight > 5 && weight <=10) {                         // 6 - 10 lbs - 4% of their body weight
+            return .04 * weight + "lbs of dog food";
+
+        } else if (weight > 10 && weight <= 15) {                       // 11 - 15 lbs - 3% of their body weight
+            return .03 * weight + "lbs of dog food";
+
+        } else if (weight > 15) {                                        // > 15lbs - 2% of their body weight 
+            return .02 * weight + "lbs of dog food";
+        }
+
+    } else if (age < 1){                                                // Puppies less than 1 year
+
+        if(age >= .2 && age <= .4) {                                    // 2 - 4 months 10% of their body weight
+            return .1 * weight + "lbs of dog food";
+
+        } else if (age >= .4 && age <= .7) {                            // 4 - 7 months 5% of their body weight 
+            return .05 * weight + "lbs of dog food";
+
+        }else if (age >= .7 && age <= 1) {                              // 7 - 12 months 4% of their body weight
+            return .04 * weight + "lbs of dog food";
+        }
+    } 
+}
+ 
+    console.log(dogFeeder(15, 1));
 
 
 
