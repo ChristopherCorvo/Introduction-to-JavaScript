@@ -164,7 +164,11 @@ console.log(rpsGame("Rock"));
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kilometerToMiles (kilometers) { 
+    return Math.round(0.62137119 * kilometers) + " miles";         // 1 kilometer is equal to 0.621371 miles
+}
 
+console.log(kilometerToMiles(10));
 
 
 
