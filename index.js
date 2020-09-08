@@ -205,8 +205,24 @@ annoyingSong(99);
 //60s should be D 
 //and anything below 60 should be F
   
+function GradeCalc (gradeOutOfOneHundred) {
+    if (gradeOutOfOneHundred <= 60){
+        return "You have recieved an F grade";
+    }else if(gradeOutOfOneHundred > 60 && gradeOutOfOneHundred <= 69){
+        return "You have recieved a D grade";
+    } else if(gradeOutOfOneHundred >= 70 && gradeOutOfOneHundred <= 79){
+        return "You have recieved a C grade";
+    } else if(gradeOutOfOneHundred >= 80 && gradeOutOfOneHundred <= 89){
+        return "You have recieved a B grade";
+    } else if (gradeOutOfOneHundred >= 90) {
+        return "You hae recieved an A grade"
+    } else {
+        return "You have recieved an incomplete"
+    }
 
-  
+}
+ 
+console.log(GradeCalc(95));
   
 
 /************************************************************** Stretch **************************************************************/
