@@ -1,26 +1,41 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge;
 
+if(votingAge > 18) {
+    console.log(true);
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+let legalDrinkingAge = 21;
+let patronAge = 22;
+let bartender;
 
+if (patronAge >= legalDrinkingAge) {
+    bartender = "What would you like to drink?";
+} else {
+    bartender = "Sorry Kid, you are to young to be served here";
+}
 
-
-
+console.log(bartender)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+let string = "1999";
+let integer = Number(string);
 
-
-
+console.log(integer);
 
 //Task d: Write a function to multiply a*b 
 
+function multiply (a,b) {
+    return a*b;
+}
 
-
+console.log(multiply(2,2));
 
 
 /************************************************************** Task 2 **************************************************************/
