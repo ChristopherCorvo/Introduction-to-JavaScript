@@ -66,6 +66,9 @@ console.log(dogYears(34));
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+
+// Note to user months should be enterd as a decimal. Example 2 months = .2
+
 function dogFeeder(weight, age) {
     if(age >= 1 ){                                                      // adult dogs at least 1 year
 
@@ -98,9 +101,6 @@ function dogFeeder(weight, age) {
  
     console.log(dogFeeder(15, 1));
 
-
-
-
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
@@ -108,8 +108,57 @@ function dogFeeder(weight, age) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+
+function rpsGame (humanChoice) {
+
+    let humanChoiceToNumber;
+    let computerChoice = Math.floor(Math.random() * Math.floor(3));
+    console.log(computerChoice);
+
+    // take in humanChoice (rock, paper, scissors) transform into a numeric repersentitive. 
+
+    if(humanChoice.toLowerCase() === "rock"){
+        humanChoiceToNumber = 2;
+    } else if (humanChoice.toLowerCase() === "scissors") {
+        humanChoiceToNumber = 1;
+    }else if(humanChoice.toLowerCase() === "paper"){
+        humanChoiceToNumber = 0;
+    } else {
+        return "This is not an accepted input";
+    }
+
+    console.log(humanChoiceToNumber);
+    // possible combinations of game play 
+
+    if(humanChoiceToNumber === 2 && computerChoice === 0) {
+        return "Sorry my friend you Lose";
+    }else if (humanChoiceToNumber === 2 && computerChoice === 1) {
+        return "You win";
+    }else if (humanChoiceToNumber === 2 && computerChoice === 2){
+        return "You tied with the computer";
+    }
+
+    else if (humanChoiceToNumber === 1 && computerChoice === 2){
+        return "Sorry my friend you Lose";
+    }else if (humanChoiceToNumber === 1 && computerChoice === 0){
+        return "You win";
+    }else if (humanChoiceToNumber === 1 && computerChoice === 1){
+        return "You tied with the computer";
+    }
+
+    else if (humanChoiceToNumber === 0 && computerChoice === 2){
+        return "You win";
+    } else if (humanChoiceToNumber === 0 && computerChoice === 1){
+        return "Sorry my friend you Lose";
+    }else if(humanChoiceToNumber === 0 && computerChoice === 0){
+        return "You tied with the computer";
+    } else {
+        return "Error please refresh and try again.";
+    }
+}
+
+console.log(rpsGame("Rock"));
+ 
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
