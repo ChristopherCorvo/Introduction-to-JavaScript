@@ -231,11 +231,7 @@ console.log(GradeCalc(95));
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
-function vowels(string) {
-    let lowerCaseString = string.toLowerCase();
-    console.log(lowerCaseString)
-}
-vowels("Tree");
+
 
 
 /************************************************************** Stretch **************************************************************/
