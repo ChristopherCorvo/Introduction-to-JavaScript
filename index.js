@@ -1,7 +1,7 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-let votingAge;
+const votingAge =18;
 
 if(votingAge >= 18) {
     console.log(true);
@@ -231,8 +231,11 @@ console.log(GradeCalc(95));
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
-
-
+function vowels(string) {
+    let lowerCaseString = string.toLowerCase();
+    console.log(lowerCaseString)
+}
+vowels("Tree");
 
 
 /************************************************************** Stretch **************************************************************/
